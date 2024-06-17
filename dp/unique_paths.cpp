@@ -23,11 +23,10 @@
 // 3. Down -> Right -> Down
  
 
-
 #include <vector>
 #include <map>
 #include <set>
-#include<stdio.h>
+#include <stdio.h>
 #include<string>
 #include<algorithm>
 #include<unordered_map>
@@ -67,10 +66,19 @@ public:
                 if(i==0 && j==0)
                 {
                     dp[i][j]=1;
+
+
+
+
+
+
                     continue;
                 }
                 int up=0,left=0;
                 if(i>0)
+
+
+                
                     up=dp[i-1][j];
                 if(j>0)
                     left=dp[i][j-1];
@@ -79,4 +87,7 @@ public:
         }
         return dp[m-1][n-1];
     }
+
+    //is there a simpler way to do this?
+
 };
